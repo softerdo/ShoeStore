@@ -40,8 +40,11 @@ class ShoeListFragment : Fragment() {
         //Referencing the viewModel
         viewModel = ViewModelProvider(this).get(ShoeListViewModel::class.java)
 
+        //Adding a shoe
+        myLisOfShoes.addShoe("Blue Power", "5.5", "Power", "Powerful")
+
         //Showing the list of shoes
-        binding.listOfShoes.text = myLisOfShoes.showShoeList().toString()
+        binding.listOfShoes.text = myLisOfShoes.showShoeList()
 
 //        shoeListViewModel.myShoeModel.observe(viewLifecycleOwner, Observer {
 //            binding.listOfShoesName.text = it.company
