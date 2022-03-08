@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            tools:context=".LoginFragment">
+
+
+            <TextView
+                android:id="@+id/title"
+                style="@style/screen_title"
+                android:text="@string/title" />
+
+            <TextView
+                android:id="@+id/label_user"
+                style="@style/labels"
+                android:text="@string/email" />
+
+            <EditText
+                android:id="@+id/input_email"
+                style="@style/inputs"
+                android:hint="@string/enter_email"
+                android:inputType="textPersonName|textEmailAddress" />
+
+            <TextView
+                android:id="@+id/label_password"
+                style="@style/labels"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/label_password" />
+
+            <EditText
+                android:id="@+id/editTextTextPersonName2"
+                style="@style/inputs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="@string/enter_password"
+                android:inputType="textWebPassword" />
+
+            <Button
+                android:id="@+id/btn_login"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/button"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="64dp"
+                android:layout_marginEnd="32dp"
+                android:text="@string/button_login" />
+
+            <Button
+                android:id="@+id/btn_login_with_account"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/button"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="32dp"
+                android:layout_marginBottom="70dp"
+                android:backgroundTint="@color/colorAccent"
+                android:text="@string/login_with_account"
+                android:textColorLink="#009688" />
+        </LinearLayout>
+    </ScrollView>
+</layout>

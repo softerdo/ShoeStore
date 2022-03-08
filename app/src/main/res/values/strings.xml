@@ -1,0 +1,44 @@
+<resources>
+    <string name="app_name">ShoeStore</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title">Login</string>
+    <string name="email">E-mail</string>
+    <string name="enter_email">Enter your email</string>
+    <string name="label_password">Password</string>
+    <string name="enter_password">Enter your password</string>
+    <string name="button_login">Login</string>
+    <string name="login_with_account">Login with an existing account</string>
+    <string name="welcome_screen">Welcome</string>
+    <string name="btn_instructions">Instructions</string>
+    <string name="btn_shoe_list">Shoe List</string>
+    <string name="title_shoe_list">List of Shoes</string>
+    <string name="shoe_list_content_desc">Button to add an item</string>
+    <string name="welcome_text">Welcome to the Old Shoe Store \n
+        \nHere you\'ll find some new old shoes that you can buy for a fair price.\n
+        \nSome of our shoes are from 1891 and they are shining like diamonds.\n
+        \nHit the instructions button to check our catalog!
+    </string><string name="instructions_text">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam risus tortor, tempor a aliquam eu, vulputate non enim.\n
+    \nVivamus pulvinar, diam et vestibulum venenatis, leo velit molestie neque, a efficitur velit elit vitae risus.
+    Aliquam erat volutpat. Pellentesque viverra orci sapien, non consectetur quam lobortis ac.\n
+    \nNam nibh velit, ullamcorper id tortor at, facilisis efficitur tortor.
+    Curabitur porttitor lectus non tellus porttitor, in elementum erat ullamcorper. Nulla eget laoreet lectus.\n
+    \nAenean dignissim at odio eget varius. Vestibulum eget pretium ex. Mauris pulvinar rutrum ligula vitae hendrerit.
+    Curabitur ultrices suscipit dui ac rhoncus.
+    </string>
+
+    <string name="shoe_detail_title">Shoe Details</string>
+    <string name="shoe_detail_name">Shoe name</string>
+    <string name="shoe_detail_company">Company</string>
+    <string name="shoe_detail_shoe_size">Shoe size</string>
+    <string name="shoe_detail_description">Description</string>
+    <string name="shoe_detail_input_name">Enter a name for your shoe</string>
+    <string name="shoe_detail_input_company">Enter the company name</string>
+    <string name="shoe_detail_shoe_input_size">Enter the shoe size</string>
+    <string name="shoe_detail_input_description">Enter a description</string>
+    <string name="shoe_detail_btn_cancel">Cancel</string>
+    <string name="shoe_detail_btn_save">Save</string>
+    <string name="logout">Logout</string>
+    <string name="list_of_shoes">List of shoes</string>
+</resources>
