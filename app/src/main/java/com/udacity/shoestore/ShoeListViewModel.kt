@@ -1,12 +1,17 @@
 package com.udacity.shoestore
 
+import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.udacity.shoestore.models.Shoe
+import java.util.stream.Collectors.toCollection
 
 class ShoeListViewModel: ViewModel() {
 
-    var shoe = MutableLiveData<Shoe>()
+    private var _shoes = MutableLiveData<List<Shoe>>()
+    val shoes : LiveData<List<Shoe>>
+        get() = _shoes
+
     private var shoeList = mutableListOf<Shoe>(
         Shoe("skate", "6.0", "Adidas", "Awesome colors"),
         Shoe("Run", "6.5", "Adidas", "Speedy Gonzalez"),
@@ -14,11 +19,12 @@ class ShoeListViewModel: ViewModel() {
         Shoe("Ferrari", "7.5", "Puma", "Next level"),
         Shoe("Air", "7.0", "Nike", "Air Jordan"),
         Shoe("Green", "6.5", "Reebok", "Clean"),
-        Shoe("Fit", "8.0", "Puma", "Comfortable")
+        Shoe("Fit", "8.0", "Puma", "Comfortable"),
+        Shoe("Run", "6.5", "Adidas", "Speedy Gonzalez")
     )
-
     init {
-        showShoeList()
+        _shoes.value = shoeList
+
     }
 
     fun showShoeList():String{
@@ -34,10 +40,18 @@ class ShoeListViewModel: ViewModel() {
             }
             return combinedShoesData
         }
+    fun showShoeListWithArguments(args: ArrayList<String>):String{
+        var combinedData = ""
+        for (item in args){
+            combinedData = combinedData.plus(
+                args[0] + args[1] + args[2] + args[3]
+            )
+        }
+        return combinedData
+    }
 
-    fun addShoe(name:String, size:String, company:String, description:String):String{
-        shoeList.add(Shoe(name, size, company, description))
-        return shoeList.toString()
+    fun addShoe(newShoe: Shoe){
+        shoeList.add(newShoe)
     }
 
 }
