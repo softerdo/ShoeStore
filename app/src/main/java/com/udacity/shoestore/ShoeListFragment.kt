@@ -36,6 +36,7 @@ class ShoeListFragment : Fragment() {
         //Showing the menu
         setHasOptionsMenu(true)
 
+        //Observing changes
         viewModel.shoes.observe(viewLifecycleOwner, Observer {
             shoeList ->
             //Showing the list
@@ -55,9 +56,10 @@ class ShoeListFragment : Fragment() {
         inflater.inflate(R.menu.overflow_menu, menu)
     }
 
-    //Takes me to the desired destination
+    //Takes me to the login fragment
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        findNavController().navigate(ShoeListFragmentDirections.actionShoeListFragmentToLoginFragment())
+        findNavController()
+            .navigate(ShoeListFragmentDirections.actionShoeListFragmentToLoginFragment())
         return true
     }
 
