@@ -18,12 +18,11 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        val binding = DataBindingUtil.setContentView<ActivityMainBinding>(this, R.layout.activity_main)
+        val binding = DataBindingUtil.
+        setContentView<ActivityMainBinding>(this, R.layout.activity_main)
 
+        //Setting the action bar
         setSupportActionBar(findViewById(R.id.my_toolbar))
-
-        //To show the menu on this fragment
-        //setHasOptionsMenu(true)
 
         //For navigating up
         val navHostFragment = supportFragmentManager.findFragmentById(R.id.myNavHostFragment) as NavHostFragment
@@ -38,4 +37,5 @@ class MainActivity : AppCompatActivity() {
         val navController = this.findNavController(R.id.myNavHostFragment)
         return navController.navigateUp()
     }
+
 }

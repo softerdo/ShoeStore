@@ -10,8 +10,6 @@ import androidx.navigation.Navigation
 import androidx.navigation.findNavController
 import androidx.navigation.ui.NavigationUI
 import com.udacity.shoestore.databinding.FragmentShoeListBinding
-import com.udacity.shoestore.databinding.*
-import kotlinx.android.synthetic.main.fragment_shoe_list.*
 
 class ShoeListFragment : Fragment() {
 
@@ -36,12 +34,11 @@ class ShoeListFragment : Fragment() {
         //Showing the menu
         setHasOptionsMenu(true)
 
-
         viewModel.shoes.observe(viewLifecycleOwner, Observer {
             shoeList ->
+            //Showing the list
             binding.listOfShoes.text = viewModel.showShoeList()
         })
-
 
         //Listener to navigate to the shoeDetail Fragment
         binding.fabShoeList.setOnClickListener(
@@ -55,6 +52,7 @@ class ShoeListFragment : Fragment() {
         super.onCreateOptionsMenu(menu, inflater)
         inflater.inflate(R.menu.overflow_menu, menu)
     }
+
     //Takes me to the desired destination
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return NavigationUI.onNavDestinationSelected(item, requireView().findNavController())
@@ -62,21 +60,3 @@ class ShoeListFragment : Fragment() {
     }
 
 }
-
-//        binding.listOfShoes.text = myLisOfShoes.showShoeList()
-//        val args: ShoeListFragmentArgs by navArgs()
-//        val shoeName = args.shoeName
-//        list_of_shoes_two.text = shoeName
-
-
-
-//        listOfShoes.text = myLisOfShoes.showShoeList()
-//Getting the values from ShoeDetailFragment
-//        val args = this.arguments
-//            if (args?.getStringArrayList("info") != null){
-//        val myValues = requireArguments().getStringArrayList("info")
-//            newShoe = myLisOfShoes.showShoeListWithArguments(myValues)
-//        list_of_shoes_two.text = myValues.toString()
-//Add a shoe and return to the ShoeListFragment
-//            myLisOfShoes.addShoe(newShoe)
-//            }

@@ -8,6 +8,7 @@
             name="viewModel"
             type="com.udacity.shoestore.models.Shoe" />
     </data>
+<!--    Using a constraint layout to get more practice with it-->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
