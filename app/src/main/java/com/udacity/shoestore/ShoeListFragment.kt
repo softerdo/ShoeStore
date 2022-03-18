@@ -8,8 +8,10 @@ import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.Observer
 import androidx.navigation.Navigation
 import androidx.navigation.findNavController
+import androidx.navigation.fragment.findNavController
 import androidx.navigation.ui.NavigationUI
 import com.udacity.shoestore.databinding.FragmentShoeListBinding
+import androidx.navigation.fragment.NavHostFragment.Companion.findNavController as findNavController
 
 class ShoeListFragment : Fragment() {
 
@@ -55,8 +57,8 @@ class ShoeListFragment : Fragment() {
 
     //Takes me to the desired destination
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        return NavigationUI.onNavDestinationSelected(item, requireView().findNavController())
-                || super.onOptionsItemSelected(item)
+        findNavController().navigate(ShoeListFragmentDirections.actionShoeListFragmentToLoginFragment())
+        return true
     }
 
 }
